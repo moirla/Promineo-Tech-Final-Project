@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="Donut ERD">
+	<entities>
+		<data-source id="mysql8-1803362fd7d-18154d42f0197ff">
+			<entity id="1" name="customer" fq-name="donut_sales.customer">
+				<path name="donut_sales"/>
+			</entity>
+			<entity id="2" name="donut" fq-name="donut_sales.donut">
+				<path name="donut_sales"/>
+			</entity>
+			<entity id="3" name="orders" fq-name="donut_sales.orders">
+				<path name="donut_sales"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="orders_ibfk_1" fq-name="donut_sales.orders.orders_ibfk_1" type="fk" pk-ref="1" fk-ref="3"/>
+		<relation name="orders_ibfk_2" fq-name="donut_sales.orders.orders_ibfk_2" type="fk" pk-ref="2" fk-ref="3"/>
+	</relations>
+</diagram>
